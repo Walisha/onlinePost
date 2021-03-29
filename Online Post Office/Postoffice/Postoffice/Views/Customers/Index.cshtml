@@ -1,0 +1,180 @@
+﻿@model IEnumerable<Postoffice.Models.Customer>
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V16</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="../Login/images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/css/util.css">
+	<link rel="stylesheet" type="text/css" href="~/Login/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		#myInput {
+			background-image: url('/css/searchicon.png');
+			background-position: 10px 10px;
+			background-repeat: no-repeat;
+			width: 100%;
+			font-size: 16px;
+			padding: 12px 20px 12px 40px;
+			border: 1px solid #ddd;
+			margin-bottom: 12px;
+		}
+
+		#myTable {
+			border-collapse: collapse;
+			width: 100%;
+			border: 1px solid #ddd;
+			font-size: 18px;
+		}
+
+			#myTable th, #myTable td {
+				text-align: left;
+				padding: 12px;
+			}
+
+			#myTable tr {
+				border-bottom: 1px solid #ddd;
+			}
+
+				#myTable tr.header {
+					background-color: burlywood;
+				}
+
+				#myTable tr:hover {
+					background-color: black;
+				}
+	</style>
+	<!--===============================================================================================-->
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('../images/hero_bg_2.jpg');">
+			<div class="container">
+				<br />
+				<span class="login100-form-title">
+					<button type="button" class="btn btn-secondary px-4 py-2 text-white btn-lg">Sign Up Details</button>
+
+					<br />
+					<br />
+				</span>
+				<div class="wrap-login100">
+					<span class="login100-form-title">
+						<input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name">
+					</span>
+				</div>
+				<p>
+					@Html.ActionLink("Create New", "Create")
+				</p>
+				<table id="myTable">
+					<tr class="text-white">
+						<th class="text-white">
+							@Html.DisplayNameFor(model => model.Name)
+						</th>
+						<th class="text-white">
+							@Html.DisplayNameFor(model => model.Email)
+						</th>
+						<th class="text-white">
+							@Html.DisplayNameFor(model => model.Password)
+						</th>
+						<th class="text-white">
+							@Html.DisplayNameFor(model => model.Role)
+						</th>
+						<th></th>
+					</tr>
+
+					@foreach (var item in Model)
+					{
+						<tr class="text-white">
+							<td class="text-white">
+								@Html.DisplayFor(modelItem => item.Name)
+							</td>
+							<td class="text-white">
+								@Html.DisplayFor(modelItem => item.Email)
+							</td>
+							<td class="text-white">
+								@Html.DisplayFor(modelItem => item.Password)
+							</td>
+							<td class="text-white">
+								@Html.DisplayFor(modelItem => item.Role)
+							</td>
+							<td class="text-white">
+								@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+								@Html.ActionLink("Details", "Details", new { id = item.Id }) |
+								@Html.ActionLink("Delete", "Delete", new { id = item.Id })
+							</td>
+						</tr>
+					}
+
+				</table>
+			</div>
+		</div>
+	</div>
+	<div id="dropDownSelect1"></div>
+
+	<!--===============================================================================================-->
+	<script src="~/Login/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/Login/vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/Login/vendor/bootstrap/js/popper.js"></script>
+	<script src="~/Login/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/Login/vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/Login/vendor/daterangepicker/moment.min.js"></script>
+	<script src="~/Login/vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/Login/vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/Login/js/main.js"></script>
+	<script>
+		function myFunction() {
+			var input, filter, table, tr, td, i, txtValue;
+			input = document.getElementById("myInput");
+			filter = input.value.toUpperCase();
+			table = document.getElementById("myTable");
+			tr = table.getElementsByTagName("tr");
+			for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[0];
+				if (td) {
+					txtValue = td.textContent || td.innerText;
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+					} else {
+						tr[i].style.display = "none";
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>

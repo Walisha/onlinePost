@@ -1,0 +1,188 @@
+﻿@model Postoffice.Models.Customer
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Login.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Employee</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="../Login/images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/Login/css/util.css">
+	<link rel="stylesheet" type="text/css" href="~/Login/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		#myInput {
+			background-image: url('/css/searchicon.png');
+			background-position: 10px 10px;
+			background-repeat: no-repeat;
+			width: 100%;
+			font-size: 16px;
+			padding: 12px 20px 12px 40px;
+			border: 1px solid #ddd;
+			margin-bottom: 12px;
+		}
+
+		#myTable {
+			border-collapse: collapse;
+			width: 100%;
+			border: 1px solid #ddd;
+			font-size: 18px;
+		}
+
+			#myTable th, #myTable td {
+				text-align: left;
+				padding: 12px;
+			}
+
+			#myTable tr {
+				border-bottom: 1px solid #ddd;
+			}
+
+				#myTable tr.header {
+					background-color: burlywood;
+				}
+
+				#myTable tr:hover {
+					background-color: black;
+				}
+	</style>
+	<!--===============================================================================================-->
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('../images/hero_bg_2.jpg');">
+			<div class="container">
+				<br />
+				<br />
+				<br />
+				<span class="login100-form-title">
+					<button type="button" class="btn btn-secondary px-4 py-2 text-white btn-lg">Customer Details</button>
+
+					<br />
+					<br />
+				</span>
+				<div class="wrap-login100">
+					<span class="login100-form-title">
+						<input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name">
+					</span>
+				</div>
+				<table id="myTable">
+					<tr class="header">
+						<th style="width:20%;">Id</th>
+						<th style="width:40%;">Name</th>
+						<th style="width:30%;">Service</th>
+					</tr>
+					<tr>
+						<td class="text-white">1</td>
+						<td class="text-white">Farah Mehhtab</td>
+						<td class="text-white">Money Order</td>
+					</tr>
+					<tr>
+						<td class="text-white">2</td>
+						<td class="text-white">Dania Shabih</td>
+						<td class="text-white">Fast Cash</td>
+					</tr>
+					<tr>
+						<td class="text-white">3</td>
+						<td class="text-white">Masooma Haderi</td>
+						<td class="text-white">Courier</td>
+					</tr>
+					<tr>
+						<td class="text-white">4</td>
+						<td class="text-white">Ghulam Fatima</td>
+						<td class="text-white">Money order</td>
+					</tr>
+					<tr>
+						<td class="text-white">5</td>
+						<td class="text-white">Navaid Hasnain</td>
+						<td class="text-white">Courier</td>
+					</tr>
+					<tr>
+						<td class="text-white">6</td>
+						<td class="text-white">Munib Shabih</td>
+						<td class="text-white">Speed Post</td>
+					</tr>
+					<tr>
+						<td class="text-white">7</td>
+						<td class="text-white">Muhammad Umair</td>
+						<td class="text-white">Fast Cash</td>
+					</tr>
+					<tr>
+						<td class="text-white">8</td>
+						<td class="text-white">Usama Shabih</td>
+						<td class="text-white">Money Order</td>
+					</tr>
+				</table>
+				<br />
+				<br />
+				<script>
+						function myFunction() {
+							var input, filter, table, tr, td, i, txtValue;
+							input = document.getElementById("myInput");
+							filter = input.value.toUpperCase();
+							table = document.getElementById("myTable");
+							tr = table.getElementsByTagName("tr");
+							for (i = 0; i < tr.length; i++) {
+								td = tr[i].getElementsByTagName("td")[0];
+								if (td) {
+									txtValue = td.textContent || td.innerText;
+									if (txtValue.toUpperCase().indexOf(filter) > -1) {
+										tr[i].style.display = "";
+									} else {
+										tr[i].style.display = "none";
+									}
+								}
+							}
+						}
+				</script>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="dropDownSelect1"></div>
+
+	<!--===============================================================================================-->
+	<script src="~/Login/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/Login/vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/Login/vendor/bootstrap/js/popper.js"></script>
+	<script src="~/Login/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/Login/vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/Login/vendor/daterangepicker/moment.min.js"></script>
+	<script src="~/Login/vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/Login/vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/Login/js/main.js"></script>
+
+</body>
+</html>

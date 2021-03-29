@@ -1,0 +1,548 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
+<div class="site-section bg-light" id="section-services">
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-md-7 text-center border-primary">
+				<h2 class="font-weight-light text-primary" data-aos="fade">Weight Converter</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-7 mb-5">
+				<form action="#" class="p-5 bg-white">
+					<div class="row form-group">
+						<div class="col-md-12">
+							<label class="font-weight-bold text-primary">Origin</label>
+							<br />
+							<select id="dropdown-menu">
+								<option data-code="AF" data-name="Afghanistan" data-cid="c32"><i class="flagstrap-icon"></i>Afghanistan (+93)</option>
+								<option data-code="AS" data-name="American Samoa" data-cid="c35"><i class="flagstrap-icon"></i>American Samoa (+1-684)</option>
+								<option data-code="AM" data-name="Armenia" data-cid="c41"><i class="flagstrap-icon"></i>Armenia (+374)</option>
+								<option data-code="AU" data-name="Australia" data-cid="c43"><i class="flagstrap-icon"></i>Australia (+61)</option>
+								<option data-code="AT" data-name="Austria" data-cid="c44"><i class="flagstrap-icon"></i>Austria (+43)</option>
+								<option data-code="AZ" data-name="Azerbaijan" data-cid="c45"><i class="flagstrap-icon"></i>Azerbaijan (+994)</option>
+								<option data-code="BD" data-name="Bangladesh" data-cid="c48"><i class="flagstrap-icon"></i>Bangladesh (+880)</option>
+								<option data-code="BB" data-name="Barbados" data-cid="c49"><i class="flagstrap-icon"></i>Barbados (+1-246)</option>
+								<option data-code="BY" data-name="Belarus" data-cid="c50"><i class="flagstrap-icon"></i>Belarus (+375)</option>
+								<option data-code="BE" data-name="Belgium" data-cid="c51"><i class="flagstrap-icon"></i>Belgium (+32)</option>
+								<option data-code="BT" data-name="Bhutan" data-cid="c55"><i class="flagstrap-icon"></i>Bhutan (+975)</option>
+								<option data-code="BR" data-name="Brazil" data-cid="c59"><i class="flagstrap-icon"></i>Brazil (+55)</option>
+								<option data-code="CA" data-name="Canada" data-cid="c68"><i class="flagstrap-icon"></i>Canada (+1)</option>
+								<option data-code="CN" data-name="China" data-cid="c74"><i class="flagstrap-icon"></i>China (+86)</option>
+								<option data-code="CO" data-name="Colombia" data-cid="c77"><i class="flagstrap-icon"></i>Colombia (+57)</option>
+								<option data-code="CY" data-name="Cyprus" data-cid="c83"><i class="flagstrap-icon"></i>Cyprus (+357)</option>
+								<option data-code="DK" data-name="Denmark" data-cid="c86"><i class="flagstrap-icon"></i>Denmark (+45)</option>
+								<option data-code="EG" data-name="Egypt" data-cid="c93"><i class="flagstrap-icon"></i>Egypt (+20)</option>
+								<option data-code="SV" data-name="El Salvador" data-cid="c94"><i class="flagstrap-icon"></i>El Salvador (+503)</option>
+								<option data-code="FI" data-name="Finland" data-cid="c102"><i class="flagstrap-icon"></i>Finland (+358)</option>
+								<option data-code="FR" data-name="France" data-cid="c103"><i class="flagstrap-icon"></i>France (+33)</option>
+								<option data-code="GE" data-name="Georgia" data-cid="c107"><i class="flagstrap-icon"></i>Georgia (+995)</option>
+								<option data-code="DE" data-name="Germany" data-cid="c108"><i class="flagstrap-icon"></i>Germany (+49)</option>
+								<option data-code="GR" data-name="Greece" data-cid="c111"><i class="flagstrap-icon"></i>Greece (+30)</option>
+								<option data-code="GL" data-name="Greenland" data-cid="c112"><i class="flagstrap-icon"></i>Greenland (+299)</option>
+								<option data-code="HN" data-name="Honduras" data-cid="c120"><i class="flagstrap-icon"></i>Honduras (+504)</option>
+								<option data-code="HK" data-name="Hong Kong" data-cid="c121"><i class="flagstrap-icon"></i>Hong Kong (+852)</option>
+								<option data-code="IS" data-name="Iceland" data-cid="c123"><i class="flagstrap-icon"></i>Iceland (+354)</option>
+								<option data-code="IN" data-name="India" data-cid="c124"><i class="flagstrap-icon"></i>India (+91)</option>
+								<option data-code="ID" data-name="Indonesia" data-cid="c125"><i class="flagstrap-icon"></i>Indonesia (+62)</option>
+								<option data-code="IR" data-name="Iran" data-cid="c126"><i class="flagstrap-icon"></i>Iran (+98)</option>
+								<option data-code="IQ" data-name="Iraq" data-cid="c127"><i class="flagstrap-icon"></i>Iraq (+964)</option>
+								<option data-code="IE" data-name="Ireland" data-cid="c128"><i class="flagstrap-icon"></i>Ireland (+353)</option>
+								<option data-code="IL" data-name="Israel" data-cid="c130"><i class="flagstrap-icon"></i>Israel (+972)</option>
+								<option data-code="IT" data-name="Italy" data-cid="c131"><i class="flagstrap-icon"></i>Italy (+39)</option>
+								<option data-code="JP" data-name="Japan" data-cid="c134"><i class="flagstrap-icon"></i>Japan (+81)</option>
+								<option data-code="JE" data-name="Jersey" data-cid="c135"><i class="flagstrap-icon"></i>Jersey (+44-1534)</option>
+								<option data-code="JO" data-name="Jordan" data-cid="c136"><i class="flagstrap-icon"></i>Jordan (+962)</option>
+								<option data-code="KW" data-name="Kuwait" data-cid="c140"><i class="flagstrap-icon"></i>Kuwait (+965)</option>
+								<option data-code="LB" data-name="Lebanon" data-cid="c144"><i class="flagstrap-icon"></i>Lebanon (+961)</option>
+								<option data-code="LR" data-name="Liberia" data-cid="c146"><i class="flagstrap-icon"></i>Liberia (+231)</option>
+								<option data-code="LY" data-name="Libya" data-cid="c147"><i class="flagstrap-icon"></i>Libya (+218)</option>
+								<option data-code="MO" data-name="Macao" data-cid="c151"><i class="flagstrap-icon"></i>Macao (+853)</option>
+								<option data-code="MY" data-name="Malaysia" data-cid="c155"><i class="flagstrap-icon"></i>Malaysia (+60)</option>
+								<option data-code="MV" data-name="Maldives" data-cid="c156"><i class="flagstrap-icon"></i>Maldives (+960)</option>
+								<option data-code="MR" data-name="Mauritania" data-cid="c161"><i class="flagstrap-icon"></i>Mauritania (+222)</option>
+								<option data-code="MU" data-name="Mauritius" data-cid="c162"><i class="flagstrap-icon"></i>Mauritius (+230)</option>
+								<option data-code="MX" data-name="Mexico" data-cid="c164"><i class="flagstrap-icon"></i>Mexico (+52)</option>
+								<option data-code="NP" data-name="Nepal" data-cid="c176"><i class="flagstrap-icon"></i>Nepal (+977)</option>
+								<option data-code="NL" data-name="Netherlands" data-cid="c177"><i class="flagstrap-icon"></i>Netherlands (+31)</option>
+								<option data-code="NZ" data-name="New Zealand" data-cid="c180"><i class="flagstrap-icon"></i>New Zealand (+64)</option>
+								<option data-code="NG" data-name="Nigeria" data-cid="c183"><i class="flagstrap-icon"></i>Nigeria (+234)</option>
+								<option data-code="" data-name="North Korea" data-cid="c185"><i class="flagstrap-icon"></i>North Korea (+850)</option>
+								<option data-code="NO" data-name="Norway" data-cid="c187"><i class="flagstrap-icon"></i>Norway (+47)</option>
+								<option data-code="OM" data-name="Oman" data-cid="c188"><i class="flagstrap-icon"></i>Oman (+968)</option>
+								<option data-code="PK" data-name="Pakistan" data-cid="c189"><i class="flagstrap-icon"></i>Pakistan (+92)</option>
+								<option data-code="PA" data-name="Panama" data-cid="c191"><i class="flagstrap-icon"></i>Panama (+507)</option>
+								<option data-code="PH" data-name="Philippines" data-cid="c195"><i class="flagstrap-icon"></i>Philippines (+63)</option>
+								<option data-code="PL" data-name="Poland" data-cid="c197"><i class="flagstrap-icon"></i>Poland (+48)</option>
+								<option data-code="PT" data-name="Portugal" data-cid="c198"><i class="flagstrap-icon"></i>Portugal (+351)</option>
+								<option data-code="QA" data-name="Qatar" data-cid="c201"><i class="flagstrap-icon"></i>Qatar (+974)</option>
+								<option data-code="RO" data-name="Romania" data-cid="c203"><i class="flagstrap-icon"></i>Romania (+40)</option>
+								<option data-code="RU" data-name="Russia" data-cid="c204"><i class="flagstrap-icon"></i>Russia (+7)</option>
+								<option data-code="SA" data-name="Saudi Arabia" data-cid="c216"><i class="flagstrap-icon"></i>Saudi Arabia (+966)</option>
+								<option data-code="SG" data-name="Singapore" data-cid="c221"><i class="flagstrap-icon"></i>Singapore (+65)</option>
+								<option data-code="ZA" data-name="South Africa" data-cid="c226"><i class="flagstrap-icon"></i>South Africa (+27)</option>
+								<option data-code="KR" data-name="South Korea" data-cid="c227"><i class="flagstrap-icon"></i>South Korea (+82)</option>
+								<option data-code="ES" data-name="Spain" data-cid="c228"><i class="flagstrap-icon"></i>Spain (+34)</option>
+								<option data-code="LK" data-name="Sri Lanka" data-cid="c229"><i class="flagstrap-icon"></i>Sri Lanka (+94)</option>
+								<option data-code="SD" data-name="Sudan" data-cid="c230"><i class="flagstrap-icon"></i>Sudan (+249)</option>
+								<option data-code="SE" data-name="Sweden" data-cid="c234"><i class="flagstrap-icon"></i>Sweden (+46)</option>
+								<option data-code="CH" data-name="Switzerland" data-cid="c235"><i class="flagstrap-icon"></i>Switzerland (+41)</option>
+								<option data-code="SY" data-name="Syria" data-cid="c236"><i class="flagstrap-icon"></i>Syria (+963)</option>
+								<option data-code="TW" data-name="Taiwan" data-cid="c237"><i class="flagstrap-icon"></i>Taiwan (+886)</option>
+								<option data-code="TJ" data-name="Tajikistan" data-cid="c238"><i class="flagstrap-icon"></i>Tajikistan (+992)</option>
+								<option data-code="TZ" data-name="Tanzania" data-cid="c239"><i class="flagstrap-icon"></i>Tanzania (+255)</option>
+								<option data-code="TH" data-name="Thailand" data-cid="c240"><i class="flagstrap-icon"></i>Thailand (+66)</option>
+								<option data-code="TR" data-name="Turkey" data-cid="c246"><i class="flagstrap-icon"></i>Turkey (+90)</option>
+								<option data-code="UG" data-name="Uganda" data-cid="c251"><i class="flagstrap-icon"></i>Uganda (+256)</option>
+								<option data-code="AE" data-name="United Arab Emirates" data-cid="c253"><i class="flagstrap-icon"></i>United Arab Emirates (+971)</option>
+								<option data-code="GB" data-name="United Kingdom" data-cid="c254"><i class="flagstrap-icon"></i>United Kingdom (+44)</option>
+								<option data-code="US" data-name="United States" data-cid="c255"><i class="flagstrap-icon"></i>United States (+1)</option>
+								<option data-code="YE" data-name="Yemen" data-cid="c264"><i class="flagstrap-icon"></i>Yemen (+967)</option>
+								<option data-code="ZM" data-name="Zambia" data-cid="c265"><i class="flagstrap-icon"></i>Zambia (+260)</option>
+								<option data-code="ZW" data-name="Zimbabwe" data-cid="c266"><i class="flagstrap-icon"></i>Zimbabwe (+263)</option>
+							</select>
+						</div>
+						<br />
+						<br />
+						<br />
+						<div class="col-md-12">
+							<label class="font-weight-bold text-primary">Destination</label>
+							<br />
+							<select id="dropdown-menu">
+								<option data-code="AF" data-name="Afghanistan" data-cid="c32"><i class="flagstrap-icon"></i>Afghanistan (+93)</option>
+								<option data-code="AS" data-name="American Samoa" data-cid="c35"><i class="flagstrap-icon"></i>American Samoa (+1-684)</option>
+								<option data-code="AM" data-name="Armenia" data-cid="c41"><i class="flagstrap-icon"></i>Armenia (+374)</option>
+								<option data-code="AU" data-name="Australia" data-cid="c43"><i class="flagstrap-icon"></i>Australia (+61)</option>
+								<option data-code="AT" data-name="Austria" data-cid="c44"><i class="flagstrap-icon"></i>Austria (+43)</option>
+								<option data-code="AZ" data-name="Azerbaijan" data-cid="c45"><i class="flagstrap-icon"></i>Azerbaijan (+994)</option>
+								<option data-code="BD" data-name="Bangladesh" data-cid="c48"><i class="flagstrap-icon"></i>Bangladesh (+880)</option>
+								<option data-code="BB" data-name="Barbados" data-cid="c49"><i class="flagstrap-icon"></i>Barbados (+1-246)</option>
+								<option data-code="BY" data-name="Belarus" data-cid="c50"><i class="flagstrap-icon"></i>Belarus (+375)</option>
+								<option data-code="BE" data-name="Belgium" data-cid="c51"><i class="flagstrap-icon"></i>Belgium (+32)</option>
+								<option data-code="BT" data-name="Bhutan" data-cid="c55"><i class="flagstrap-icon"></i>Bhutan (+975)</option>
+								<option data-code="BR" data-name="Brazil" data-cid="c59"><i class="flagstrap-icon"></i>Brazil (+55)</option>
+								<option data-code="CA" data-name="Canada" data-cid="c68"><i class="flagstrap-icon"></i>Canada (+1)</option>
+								<option data-code="CN" data-name="China" data-cid="c74"><i class="flagstrap-icon"></i>China (+86)</option>
+								<option data-code="CO" data-name="Colombia" data-cid="c77"><i class="flagstrap-icon"></i>Colombia (+57)</option>
+								<option data-code="CY" data-name="Cyprus" data-cid="c83"><i class="flagstrap-icon"></i>Cyprus (+357)</option>
+								<option data-code="DK" data-name="Denmark" data-cid="c86"><i class="flagstrap-icon"></i>Denmark (+45)</option>
+								<option data-code="EG" data-name="Egypt" data-cid="c93"><i class="flagstrap-icon"></i>Egypt (+20)</option>
+								<option data-code="SV" data-name="El Salvador" data-cid="c94"><i class="flagstrap-icon"></i>El Salvador (+503)</option>
+								<option data-code="FI" data-name="Finland" data-cid="c102"><i class="flagstrap-icon"></i>Finland (+358)</option>
+								<option data-code="FR" data-name="France" data-cid="c103"><i class="flagstrap-icon"></i>France (+33)</option>
+								<option data-code="GE" data-name="Georgia" data-cid="c107"><i class="flagstrap-icon"></i>Georgia (+995)</option>
+								<option data-code="DE" data-name="Germany" data-cid="c108"><i class="flagstrap-icon"></i>Germany (+49)</option>
+								<option data-code="GR" data-name="Greece" data-cid="c111"><i class="flagstrap-icon"></i>Greece (+30)</option>
+								<option data-code="GL" data-name="Greenland" data-cid="c112"><i class="flagstrap-icon"></i>Greenland (+299)</option>
+								<option data-code="HN" data-name="Honduras" data-cid="c120"><i class="flagstrap-icon"></i>Honduras (+504)</option>
+								<option data-code="HK" data-name="Hong Kong" data-cid="c121"><i class="flagstrap-icon"></i>Hong Kong (+852)</option>
+								<option data-code="IS" data-name="Iceland" data-cid="c123"><i class="flagstrap-icon"></i>Iceland (+354)</option>
+								<option data-code="IN" data-name="India" data-cid="c124"><i class="flagstrap-icon"></i>India (+91)</option>
+								<option data-code="ID" data-name="Indonesia" data-cid="c125"><i class="flagstrap-icon"></i>Indonesia (+62)</option>
+								<option data-code="IR" data-name="Iran" data-cid="c126"><i class="flagstrap-icon"></i>Iran (+98)</option>
+								<option data-code="IQ" data-name="Iraq" data-cid="c127"><i class="flagstrap-icon"></i>Iraq (+964)</option>
+								<option data-code="IE" data-name="Ireland" data-cid="c128"><i class="flagstrap-icon"></i>Ireland (+353)</option>
+								<option data-code="IL" data-name="Israel" data-cid="c130"><i class="flagstrap-icon"></i>Israel (+972)</option>
+								<option data-code="IT" data-name="Italy" data-cid="c131"><i class="flagstrap-icon"></i>Italy (+39)</option>
+								<option data-code="JP" data-name="Japan" data-cid="c134"><i class="flagstrap-icon"></i>Japan (+81)</option>
+								<option data-code="JE" data-name="Jersey" data-cid="c135"><i class="flagstrap-icon"></i>Jersey (+44-1534)</option>
+								<option data-code="JO" data-name="Jordan" data-cid="c136"><i class="flagstrap-icon"></i>Jordan (+962)</option>
+								<option data-code="KW" data-name="Kuwait" data-cid="c140"><i class="flagstrap-icon"></i>Kuwait (+965)</option>
+								<option data-code="LB" data-name="Lebanon" data-cid="c144"><i class="flagstrap-icon"></i>Lebanon (+961)</option>
+								<option data-code="LR" data-name="Liberia" data-cid="c146"><i class="flagstrap-icon"></i>Liberia (+231)</option>
+								<option data-code="LY" data-name="Libya" data-cid="c147"><i class="flagstrap-icon"></i>Libya (+218)</option>
+								<option data-code="MO" data-name="Macao" data-cid="c151"><i class="flagstrap-icon"></i>Macao (+853)</option>
+								<option data-code="MY" data-name="Malaysia" data-cid="c155"><i class="flagstrap-icon"></i>Malaysia (+60)</option>
+								<option data-code="MV" data-name="Maldives" data-cid="c156"><i class="flagstrap-icon"></i>Maldives (+960)</option>
+								<option data-code="MR" data-name="Mauritania" data-cid="c161"><i class="flagstrap-icon"></i>Mauritania (+222)</option>
+								<option data-code="MU" data-name="Mauritius" data-cid="c162"><i class="flagstrap-icon"></i>Mauritius (+230)</option>
+								<option data-code="MX" data-name="Mexico" data-cid="c164"><i class="flagstrap-icon"></i>Mexico (+52)</option>
+								<option data-code="NP" data-name="Nepal" data-cid="c176"><i class="flagstrap-icon"></i>Nepal (+977)</option>
+								<option data-code="NL" data-name="Netherlands" data-cid="c177"><i class="flagstrap-icon"></i>Netherlands (+31)</option>
+								<option data-code="NZ" data-name="New Zealand" data-cid="c180"><i class="flagstrap-icon"></i>New Zealand (+64)</option>
+								<option data-code="NG" data-name="Nigeria" data-cid="c183"><i class="flagstrap-icon"></i>Nigeria (+234)</option>
+								<option data-code="" data-name="North Korea" data-cid="c185"><i class="flagstrap-icon"></i>North Korea (+850)</option>
+								<option data-code="NO" data-name="Norway" data-cid="c187"><i class="flagstrap-icon"></i>Norway (+47)</option>
+								<option data-code="OM" data-name="Oman" data-cid="c188"><i class="flagstrap-icon"></i>Oman (+968)</option>
+								<option data-code="PK" data-name="Pakistan" data-cid="c189"><i class="flagstrap-icon"></i>Pakistan (+92)</option>
+								<option data-code="PA" data-name="Panama" data-cid="c191"><i class="flagstrap-icon"></i>Panama (+507)</option>
+								<option data-code="PH" data-name="Philippines" data-cid="c195"><i class="flagstrap-icon"></i>Philippines (+63)</option>
+								<option data-code="PL" data-name="Poland" data-cid="c197"><i class="flagstrap-icon"></i>Poland (+48)</option>
+								<option data-code="PT" data-name="Portugal" data-cid="c198"><i class="flagstrap-icon"></i>Portugal (+351)</option>
+								<option data-code="QA" data-name="Qatar" data-cid="c201"><i class="flagstrap-icon"></i>Qatar (+974)</option>
+								<option data-code="RO" data-name="Romania" data-cid="c203"><i class="flagstrap-icon"></i>Romania (+40)</option>
+								<option data-code="RU" data-name="Russia" data-cid="c204"><i class="flagstrap-icon"></i>Russia (+7)</option>
+								<option data-code="SA" data-name="Saudi Arabia" data-cid="c216"><i class="flagstrap-icon"></i>Saudi Arabia (+966)</option>
+								<option data-code="SG" data-name="Singapore" data-cid="c221"><i class="flagstrap-icon"></i>Singapore (+65)</option>
+								<option data-code="ZA" data-name="South Africa" data-cid="c226"><i class="flagstrap-icon"></i>South Africa (+27)</option>
+								<option data-code="KR" data-name="South Korea" data-cid="c227"><i class="flagstrap-icon"></i>South Korea (+82)</option>
+								<option data-code="ES" data-name="Spain" data-cid="c228"><i class="flagstrap-icon"></i>Spain (+34)</option>
+								<option data-code="LK" data-name="Sri Lanka" data-cid="c229"><i class="flagstrap-icon"></i>Sri Lanka (+94)</option>
+								<option data-code="SD" data-name="Sudan" data-cid="c230"><i class="flagstrap-icon"></i>Sudan (+249)</option>
+								<option data-code="SE" data-name="Sweden" data-cid="c234"><i class="flagstrap-icon"></i>Sweden (+46)</option>
+								<option data-code="CH" data-name="Switzerland" data-cid="c235"><i class="flagstrap-icon"></i>Switzerland (+41)</option>
+								<option data-code="SY" data-name="Syria" data-cid="c236"><i class="flagstrap-icon"></i>Syria (+963)</option>
+								<option data-code="TW" data-name="Taiwan" data-cid="c237"><i class="flagstrap-icon"></i>Taiwan (+886)</option>
+								<option data-code="TJ" data-name="Tajikistan" data-cid="c238"><i class="flagstrap-icon"></i>Tajikistan (+992)</option>
+								<option data-code="TZ" data-name="Tanzania" data-cid="c239"><i class="flagstrap-icon"></i>Tanzania (+255)</option>
+								<option data-code="TH" data-name="Thailand" data-cid="c240"><i class="flagstrap-icon"></i>Thailand (+66)</option>
+								<option data-code="TR" data-name="Turkey" data-cid="c246"><i class="flagstrap-icon"></i>Turkey (+90)</option>
+								<option data-code="UG" data-name="Uganda" data-cid="c251"><i class="flagstrap-icon"></i>Uganda (+256)</option>
+								<option data-code="AE" data-name="United Arab Emirates" data-cid="c253"><i class="flagstrap-icon"></i>United Arab Emirates (+971)</option>
+								<option data-code="GB" data-name="United Kingdom" data-cid="c254"><i class="flagstrap-icon"></i>United Kingdom (+44)</option>
+								<option data-code="US" data-name="United States" data-cid="c255"><i class="flagstrap-icon"></i>United States (+1)</option>
+								<option data-code="YE" data-name="Yemen" data-cid="c264"><i class="flagstrap-icon"></i>Yemen (+967)</option>
+								<option data-code="ZM" data-name="Zambia" data-cid="c265"><i class="flagstrap-icon"></i>Zambia (+260)</option>
+								<option data-code="ZW" data-name="Zimbabwe" data-cid="c266"><i class="flagstrap-icon"></i>Zimbabwe (+263)</option>
+							</select>
+						</div>
+						<br />
+						<br />
+						<br />
+						<div class="col-md-12">
+							<label class="font-weight-bold text-primary">Services</label>
+							<br />
+							<select id="abc">
+								<option value="Courier">Courier</option>
+								<option value="Money Order">Money Order</option>
+								<option value="Normal Post">Normal Post</option>
+								<option value="Speed Post" selected>Speed Post</option>
+							</select>
+						</div>
+						<br />
+						<br />
+						<br />
+						<div class="col-md-12">
+							<label class="font-weight-bold text-primary" for="birthday">Date</label>
+							<br />
+							<input type="date" id="birthday" name="birthday">
+						</div>
+						<br />
+						<br />
+						<br />
+						<div class="col-md-6 mb-3 mb-md-0">
+							<label class="font-weight-bold text-primary" for="fname">Weight(KG)</label>
+							<input id="inputFeet" type="number" placeholder="Weight" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+						</div>
+						<br />
+						<br />
+						<br />
+						<div class="col-md-6">
+							<label class="font-weight-bold text-primary" for="lname">Rates(PKR)</label>
+							<input id="outputMeters" type="text" placeholder="Rates" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-5">
+
+				<div class="p-4 mb-3 bg-white">
+
+
+					<iframe src="https://www.google.com/maps/d/embed?mid=1rwSC4Zel8v3ywPeaibqjPQPWGMo" width="400" height="460"></iframe>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function LengthConverter(valNum) {
+		var options = document.getElementById("abc").value;
+		var weight = document.getElementById("inputFeet").value;
+		if (weight <= 1) {
+			if (options == "Courier") {
+				document.getElementById("outputMeters").value = 100 + 200;
+			}
+			else if (options == "Money Order") {
+				document.getElementById("outputMeters").value = 100 + 300;
+			}
+			else if (options == "Normal Post") {
+				document.getElementById("outputMeters").value = 100 + 150;
+			}
+			else if (options == "Speed Post") {
+				document.getElementById("outputMeters").value = 100 + 500;
+			}
+		}
+		if (weight <= 3) {
+			if (options == "Courier") {
+				document.getElementById("outputMeters").value = 200 + 200;
+			}
+			else if (options == "Money Order") {
+				document.getElementById("outputMeters").value = 200 + 300;
+			}
+			else if (options == "Normal Post") {
+				document.getElementById("outputMeters").value = 200 + 150;
+			}
+			else if (options == "Speed Post") {
+				document.getElementById("outputMeters").value = 200 + 500;
+			}
+		}
+		if (weight <= 5) {
+			if (options == "Courier") {
+				document.getElementById("outputMeters").value = 400 + 200;
+			}
+			else if (options == "Money Order") {
+				document.getElementById("outputMeters").value = 400 + 300;
+			}
+			else if (options == "Normal Post") {
+				document.getElementById("outputMeters").value = 400 + 150;
+			}
+			else if (options == "Speed Post") {
+				document.getElementById("outputMeters").value = 400 + 500;
+			}
+		}
+		else {
+			if (options == "Courier") {
+				document.getElementById("outputMeters").value = 500 + 200;
+			}
+			else if (options == "Money Order") {
+				document.getElementById("outputMeters").value = 500 + 300;
+			}
+			else if (options == "Normal Post") {
+				document.getElementById("outputMeters").value = 500 + 150;
+			}
+			else if (options == "Speed Post") {
+				document.getElementById("outputMeters").value = 500 + 500;
+			}
+		}
+	}
+</script>
+<div class="site-section" id="section-about">
+	<div class="container">
+		<div class="row mb-5">
+
+			<div class="col-md-5 ml-auto mb-5 order-md-2" data-aos="fade-up" data-aos-delay="100">
+				<img src="~/images/img_3.jpg" alt="Image" class="img-fluid rounded">
+			</div>
+			<div class="col-md-6 order-md-1" data-aos="fade-up">
+				<div class="text-left pb-1 border-primary mb-4">
+					<h2 class="text-primary">About Us</h2>
+				</div>
+				<p>
+					Our most precious asset – the term ‘TARS KARDO’ has been gifted to us by the people of Pakistan as an expression of their affection and TRUST.
+					It is by delivering on this trust every single day, come rain or shine, over the past four decades that we have become the country’s logistics backbone delivering an array of services to businesses and consumers alike.
+					We now pledge to add greater value to our services through a blend of passion and new technologies aimed at enhancing productivity of our clients, whilst simplifying and enriching everyday lives of our consumers.
+					Additionally, we will extend our Air and Ground Logistics Services beyond borders opening new trade routes shaped by the emerging regional opportunities, to the benefit of Pakistan.
+				</p>
+
+				<ul class="ul-check list-unstyled success">
+					<li>To love our customer and deliver quality</li>
+					<li>Justise to all stake holders</li>
+					<li>Development of our employees in a merit based culture</li>
+				</ul>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="site-section bg-image overlay" style="background-image: url('../images/hero_bg_4.jpg');" id="section-how-it-works">
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-md-7 text-center border-primary">
+				<h2 class="font-weight-light text-primary" data-aos="fade">How It Works</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+				<div class="how-it-work-item">
+					<span class="number">1</span>
+					<div class="how-it-work-body">
+						<h2>Make An Order</h2>
+						<p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.</p>
+						<ul class="ul-check list-unstyled success">
+							<li class="text-white">Error minus sint nobis dolor</li>
+							<li class="text-white">Voluptatum porro expedita labore esse</li>
+							<li class="text-white">Voluptas unde sit pariatur earum</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+				<div class="how-it-work-item">
+					<span class="number">2</span>
+					<div class="how-it-work-body">
+						<h2>Make A Payment</h2>
+						<p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.</p>
+						<ul class="ul-check list-unstyled success">
+							<li class="text-white">Error minus sint nobis dolor</li>
+							<li class="text-white">Voluptatum porro expedita labore esse</li>
+							<li class="text-white">Voluptas unde sit pariatur earum</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+				<div class="how-it-work-item">
+					<span class="number">3</span>
+					<div class="how-it-work-body">
+						<h2>Track Your Order</h2>
+						<p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.</p>
+						<ul class="ul-check list-unstyled success">
+							<li class="text-white">Error minus sint nobis dolor</li>
+							<li class="text-white">Voluptatum porro expedita labore esse</li>
+							<li class="text-white">Voluptas unde sit pariatur earum</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<div class="site-section bg-light" id="section-services">
+	<div class="container">
+		<div class="row justify-content-center mb-5" data-aos="fade-up">
+			<div class="col-md-7 text-center border-primary">
+				<h2 class="mb-0 text-primary">Our Services</h2>
+				<p class="color-black-opacity-5">Lorem ipsum dolor sit amet.</p>
+			</div>
+		</div>
+		<div class="row align-items-stretch">
+			<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+				<div class="unit-4 d-flex">
+					<div class="unit-4-icon mr-4"><span class="text-primary flaticon-plane"></span></div>
+					<div>
+						<h3>Air Freight</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+						<p><a href="#">Learn More</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+				<div class="unit-4 d-flex">
+					<div class="unit-4-icon mr-4"><span class="text-primary flaticon-boat-ship"></span></div>
+					<div>
+						<h3>Ocean Freight</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+						<p><a href="#">Learn More</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+				<div class="unit-4 d-flex">
+					<div class="unit-4-icon mr-4"><span class="text-primary flaticon-truck"></span></div>
+					<div>
+						<h3>Land Transportation</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+						<p><a href="#">Learn More</a></p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
+				<div class="unit-4 d-flex">
+					<div class="unit-4-icon mr-4"><span class="text-primary flaticon-warehouse"></span></div>
+					<div>
+						<h3>Warehousing</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+						<p><a href="#">Learn More</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
+				<div class="unit-4 d-flex">
+					<div class="unit-4-icon mr-4"><span class="text-primary flaticon-wooden"></span></div>
+					<div>
+						<h3>Storage</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+						<p><a href="#">Learn More</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+				<div class="unit-4 d-flex">
+					<div class="unit-4-icon mr-4"><span class="text-primary flaticon-worldwide"></span></div>
+					<div>
+						<h3>Worldwide Delivery</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+						<p><a href="#">Learn More</a></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<div class="site-section block-13" id="section-industries">
+
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-md-7 text-center border-primary">
+				<h2 class="mb-0 text-primary">Industries</h2>
+				<p class="color-black-opacity-5"></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="owl-carousel nonloop-block-13">
+		<div>
+			<a href="#" class="unit-1 text-center">
+				<img src="~/images/img_1.jpg" alt="Image" class="img-fluid">
+				<div class="unit-1-text">
+					<h3 class="unit-1-heading">Storage</h3>
+				</div>
+			</a>
+		</div>
+
+		<div>
+			<a href="#" class="unit-1 text-center">
+				<img src="~/images/img_2.jpg" alt="Image" class="img-fluid">
+				<div class="unit-1-text">
+					<h3 class="unit-1-heading">Air Transports</h3>
+				</div>
+			</a>
+		</div>
+
+		<div>
+			<a href="#" class="unit-1 text-center">
+				<img src="~/images/img_3.jpg" alt="Image" class="img-fluid">
+				<div class="unit-1-text">
+					<h3 class="unit-1-heading">Cargo Transports</h3>
+				</div>
+			</a>
+		</div>
+
+		<div>
+			<a href="#" class="unit-1 text-center">
+				<img src="~/images/img_4.jpg" alt="Image" class="img-fluid">
+				<div class="unit-1-text">
+					<h3 class="unit-1-heading">Cargo Ship</h3>
+				</div>
+			</a>
+		</div>
+
+		<div>
+			<a href="#" class="unit-1 text-center">
+				<img src="~/images/img_5.jpg" alt="Image" class="img-fluid">
+				<div class="unit-1-text">
+					<h3 class="unit-1-heading">Ware Housing</h3>
+				</div>
+			</a>
+		</div>
+
+
+	</div>
+</div>
+
+
+<div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(../images/hero_bg_2.jpg); background-attachment: fixed;">
+	<div class="container">
+		<div class="row align-items-center justify-content-center text-center">
+
+			<div class="col-md-7" data-aos="fade-up">
+				<a href="https://vimeo.com/channels/staffpicks/93951774" class="play-single-big mb-4 d-inline-block popup-vimeo"><span class="icon-play"></span></a>
+				<h2 class="text-white font-weight-light mb-5 h1">Watch The Video</h2>
+
+			</div>
+		</div>
+	</div>
+</div>
